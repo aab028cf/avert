@@ -1,14 +1,12 @@
 # avert
 
 ### How to run
-First install the requirements. 
-
-The `AVERT` class provides an interface for resilience evaluation. Here's the code sample:
-
+- Install the requirements. 
+- The `AVERT` class provides an interface for resilience evaluation. Here's the code sample:
 ```python
-avert = AVERT()
+f_cont = <contribution function> # select a contribution measure from avert/model/distance.py
+avert = AVERT(f_cont = <contribution function>)
 r = avert.eval(testId, metricMetadata, normalInterval, faultyInterval, metrics) # the resilience value
 ```
-
-The dataset pkl file is organized by `(testId, metricMetadata, normalInterval, faultyInterval, metrics)`.
+- The dataset pkl file is organized by `(testId, metricMetadata, normalInterval, faultyInterval, metrics)`.
 
